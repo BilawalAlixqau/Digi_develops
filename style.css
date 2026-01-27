@@ -177,7 +177,7 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--primary-color);
+    background: var(--light-color);
     margin: 3px 0;
     transition: all 0.3s ease;
 }
@@ -902,18 +902,19 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid var(--light-color);
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: inherit;
+    background-color: white;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
 }
 
 /* Footer */
@@ -1049,7 +1050,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: white;
+        background: var(--primary-color);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -1066,13 +1067,25 @@ body {
         width: 100%;
     }
 
+    .nav-menu a {
+        display: block;
+        padding: 1rem 1.5rem;
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        justify-content: center;
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
     .dropdown-menu {
         position: static;
         opacity: 1;
         visibility: visible;
         transform: none;
         box-shadow: none;
-        background: var(--light-color);
+        background: var(--primary-color);
         margin: 0;
         border-radius: 0;
         max-height: 0;
@@ -1088,8 +1101,14 @@ body {
         margin-left: auto;
     }
 
+    .dropdown-menu a {
+        color: var(--light-color);
+    }
+
     .dropdown-menu a:hover {
         padding-left: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--light-color);
     }
 
     .hamburger {
